@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Bomarshe"
         tools:targetApi="31">
         <activity
+            android:name=".about_our"
+            android:exported="false" />
+        <activity
+            android:name=".dial_take_zakaz"
+            android:exported="false" />
+        <activity
             android:name=".person"
             android:exported="false" />
         <activity
