@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topPanel"
+
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:background="@drawable/img_top_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <ScrollView
+        android:id="@+id/horscroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"
+        app:layout_constraintBottom_toTopOf="@+id/bottomPlat"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_tolko_iz_d"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:textSize="25dp"
+                    android:text="Только из духовки"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_more_tolko_iz_d"
+
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_tolko_iz_d"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_tolko_iz_d"
+                    android:layout_marginEnd="20dp"
+
+                    android:background="@drawable/icon_more_out_back"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_iz_d"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_iz_dux"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_cruas_1"
+
+                        android:layout_width="210dp"
+                        android:layout_height="160dp"
+
+                        android:background="@drawable/img_cruas_out_back"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_cruas_2"
+
+                        android:layout_width="210dp"
+                        android:layout_height="160dp"
+
+                        android:background="@drawable/img_cruas_2_out_back"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/text_kategory"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:textSize="25dp"
+                    android:text="Категории"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_more_kategory"
+
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintTop_toTopOf="@+id/text_kategory"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_kategory"
+
+                    android:background="@drawable/icon_more_out_back"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_kat"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/text_kategory"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:id="@+id/linear_kat"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_kat1"
+
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+
+                        android:background="@drawable/kat_cruas"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_kat2"
+
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+
+                        android:background="@drawable/kat_torty"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_kat3"
+
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+
+                        android:background="@drawable/kat_zav_out_back"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/text_pin"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:textSize="25dp"
+                    android:text="Недавно заказывали"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_more_pin"
+
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintTop_toTopOf="@+id/text_pin"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_pin"
+
+                    android:background="@drawable/icon_more_out_back"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/text_kategory"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:id="@+id/linear_pin"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_pin1"
+
+                        android:layout_width="200dp"
+                        android:layout_height="160dp"
+
+                        android:background="@drawable/pin1_out_back"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_pin2"
+
+                        android:layout_width="200dp"
+                        android:layout_height="160dp"
+
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+
+                        android:background="@drawable/pin2_out_back"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomPlat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bottompanel"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-30dp"
+        >
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_home"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_love"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_home_out_back"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_love"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_home"
+            app:layout_constraintStart_toEndOf="@+id/icon_backet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_love_v2"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_backet"
+
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_person"
+            app:layout_constraintStart_toEndOf="@+id/icon_love"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_backet_out_back_v2"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_person"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_backet"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_person_out_back"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

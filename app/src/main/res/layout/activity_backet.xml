@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Backet">
+
+
+    <ScrollView
+        android:id="@+id/horscroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomPlat"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topTitleBacket"
+                    android:layout_width="413dp"
+                    android:layout_height="51dp"
+
+                    android:background="@drawable/title_corz_out_backk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/shablon_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/topTitleBacket"
+
+                    android:background="@drawable/shablon_zakaz_out_back"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/minus_from_first"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/minus_out_back"
+
+                    app:layout_constraintStart_toStartOf="@+id/shablon_first"
+                    app:layout_constraintEnd_toEndOf="@+id/shablon_first"
+                    app:layout_constraintTop_toTopOf="@+id/shablon_first"
+                    app:layout_constraintBottom_toBottomOf="@+id/shablon_first"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/first_block_score"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    app:layout_constraintTop_toTopOf="@+id/minus_from_first"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_from_first"
+                    app:layout_constraintStart_toEndOf="@+id/minus_from_first"
+                    app:layout_constraintEnd_toStartOf="@+id/plus_from_first"
+                    >
+
+                    <TextView
+                        android:id="@+id/scoreProductFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="0"
+                        android:textColor="@color/crem"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/russo_one"
+                        />
+
+                    <TextView
+                        android:id="@+id/SHfirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toEndOf="@+id/scoreProductFirst"
+
+                        android:text=" шт."
+                        android:textColor="@color/crem"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/russo_one"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/plus_from_first"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/plus_out_back"
+
+                    app:layout_constraintTop_toTopOf="@+id/minus_from_first"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_from_first"
+
+                    app:layout_constraintStart_toEndOf="@+id/first_block_score"
+                    app:layout_constraintEnd_toEndOf="@+id/shablon_first"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/shablon_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/shablon_first"
+
+                    android:background="@drawable/shablon_zakaz_v2_out_back"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/minus_from_second"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/minus_out_back"
+
+                    app:layout_constraintStart_toStartOf="@+id/shablon_second"
+                    app:layout_constraintEnd_toEndOf="@+id/shablon_second"
+                    app:layout_constraintTop_toTopOf="@+id/shablon_second"
+                    app:layout_constraintBottom_toBottomOf="@+id/shablon_second"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/second_block_score"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    app:layout_constraintTop_toTopOf="@+id/minus_from_second"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_from_second"
+                    app:layout_constraintStart_toEndOf="@+id/minus_from_second"
+                    app:layout_constraintEnd_toStartOf="@+id/plus_from_second"
+                    >
+
+                    <TextView
+                        android:id="@+id/scoreProductSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="0"
+                        android:textColor="@color/crem"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/russo_one"
+                        />
+
+                    <TextView
+                        android:id="@+id/SHsecpnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toEndOf="@+id/scoreProductSecond"
+
+                        android:text=" шт."
+                        android:textColor="@color/crem"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/russo_one"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/plus_from_second"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/plus_out_back"
+
+                    app:layout_constraintTop_toTopOf="@+id/minus_from_second"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_from_second"
+
+                    app:layout_constraintStart_toEndOf="@+id/second_block_score"
+                    app:layout_constraintEnd_toEndOf="@+id/shablon_second"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/razgran_list_summs"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/crem"
+                    app:layout_constraintTop_toBottomOf="@+id/shablon_second"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginHorizontal="1dp"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/textSummFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/razgran_list_summs"
+                    android:layout_marginTop="20dp"
+                    android:text="Сумма без учёта скидок:"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:paddingStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/scoreSummFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textSummFirst"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:paddingStart="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textSummSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/scoreSummFirst"
+                    android:layout_marginTop="10dp"
+                    android:text="Скидка по акциям:"
+                    android:textSize="23dp"
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:paddingStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/scoreSummSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textSummSecond"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="23dp"
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:paddingStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textUhavePromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/scoreSummSecond"
+                    android:layout_marginTop="10dp"
+                    android:text="У вас есть промокод/сертификат?"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/russo_one"
+                    android:textColor="@color/crem"
+                    android:paddingStart="20dp"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blok_with_promo"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textUhavePromo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintEnd_toStartOf="@id/check_promo"
+                    android:background="@drawable/back_for_dialog"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/edit_text_promo"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginHorizontal="15dp"
+
+                        android:textColor="@color/crem"
+                        android:textSize="19dp"
+                        android:hint="Промокод"
+                        android:fontFamily="@font/russo_one"
+                        android:textColorHint="@color/crem"
+                        android:paddingStart="10dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/check_promo"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/back_for_dialog"
+                    app:layout_constraintStart_toEndOf="@id/blok_with_promo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/blok_with_promo"
+                    app:layout_constraintBottom_toBottomOf="@+id/blok_with_promo"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        android:text="Применить"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/russo_one"
+
+                        android:textColor="@color/crem"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/razgran_promo_to_take"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/crem"
+                    app:layout_constraintTop_toBottomOf="@+id/blok_with_promo"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="1dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textItogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/razgran_promo_to_take"
+                    android:layout_marginTop="40dp"
+
+                    android:text="Итого:"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/crem"
+                    android:fontFamily="@font/russo_one"
+                    android:textSize="25dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/scoreItogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textItogo"
+                    android:layout_marginTop="5dp"
+
+                    android:text="0"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/crem"
+                    android:fontFamily="@font/russo_one"
+                    android:textSize="25dp"
+
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/block_with_take_zakat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/scoreItogo"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/back_for_dialog"
+                    android:layout_marginHorizontal="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_take_zakaz"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        android:text="Оформить заказ"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/crem"
+                        android:fontFamily="@font/russo_one"
+                        android:textSize="25dp"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                
+                
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomPlat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bottompanel"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-30dp"
+        >
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_home"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_love"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_home_out_back"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_love"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_home"
+            app:layout_constraintStart_toEndOf="@+id/icon_backet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_love_v2"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_backet"
+
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/icon_person"
+            app:layout_constraintStart_toEndOf="@+id/icon_love"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_backet_out_back_v2"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_person"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_backet"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/icon_person_out_back"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
